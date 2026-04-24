@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#faf9f6",
+                        "on-surface-variant": "#524345",
+                        "on-tertiary-fixed": "#221b0b",
+                        "on-surface": "#1a1c1a",
+                        "on-secondary-fixed": "#3c0605",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffdad6",
+                        "inverse-surface": "#2f312f",
+                        "primary-fixed": "#ffd9dd",
+                        "tertiary-container": "#7f735f",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-error": "#ffffff",
+                        "primary-container": "#a6606b",
+                        "outline-variant": "#d7c1c3",
+                        "on-background": "#1a1c1a",
+                        "on-secondary-container": "#79342e",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-bright": "#faf9f6",
+                        "primary": "#8a4853",
+                        "secondary-container": "#ff9f95",
+                        "on-primary-fixed": "#3a0915",
+                        "on-primary-container": "#fffbff",
+                        "surface-container-high": "#e9e8e5",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#934841",
+                        "tertiary-fixed-dim": "#d3c5ad",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "on-primary-fixed-variant": "#70343e",
+                        "tertiary": "#655b47",
+                        "surface": "#faf9f6",
+                        "outline": "#857374",
+                        "inverse-on-surface": "#f2f1ee",
+                        "tertiary-fixed": "#f0e0c8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#8c4b55",
+                        "surface-variant": "#e3e2e0",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#76312b",
+                        "inverse-primary": "#ffb2bc",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dbdad7",
+                        "surface-container": "#efeeeb",
+                        "on-tertiary-fixed-variant": "#4f4533"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "xxl": "2rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.editorial-grid {
+    column-count: 1;
+    column-gap: 2.5rem
+    }
+@media (min-width: 768px) {
+    .editorial-grid {
+        column-count: 2
+        }
+    }
+@media (min-width: 1024px) {
+    .editorial-grid {
+        column-count: 3
+        }
+    }
+.editorial-card {
+    break-inside: avoid;
+    margin-bottom: 2.5rem
+    }
+.ambient-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDVsBPKJbxl_QW1cS_2zk70n5DLonAvuFM1OEt2jxoklsRKH7TOmW6Y_0IeuE5xg8Cvm7TAcLadTJwy02bA9QWvw5zy563iEslRcirZuaK56LdgJ0BjXYEY0tSnrSnBv1Rs2islLlvchCxkfjmhifxOpkHLOXRTc-ey4xAp7iub3bBSB74aefnl0mPqJ7klOuI-gcI8Gi7bXUZLB5MMgRMH3V1k4rX7sFFq4Ak2fCER41Sa1YZ7YsFc9caXbrLCZyz_1x-iSvIUXqo);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    mix-blend-mode: multiply
+    }</style>
+</head>
+{% extends "base.html" %}
+
+{% block content %}
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed relative min-h-screen overflow-x-hidden">
+
+    
+    <!-- Ambient Background Elements -->
+<div class="fixed inset-0 ambient-texture pointer-events-none -z-20"></div>
+<div class="fixed top-[-10%] left-[-5%] w-[40rem] h-[40rem] bg-primary-fixed-dim/30 rounded-full blur-[120px] -z-10"></div>
+<div class="fixed bottom-[-10%] right-[-5%] w-[35rem] h-[35rem] bg-tertiary-fixed/40 rounded-full blur-[100px] -z-10"></div>
+<div class="fixed top-[30%] right-[10%] w-[25rem] h-[25rem] bg-secondary-fixed/30 rounded-full blur-[80px] -z-10"></div>
+
+<div class="text-2xl font-headline font-bold text-primary tracking-tighter">Trendify</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-primary border-b border-primary pb-1 font-semibold" href="#">Discover</a>
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-colors duration-300 font-semibold" href="#">Trends</a>
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-colors duration-300 font-semibold" href="#">Artists</a>
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-colors duration-300 font-semibold" href="#">Boutique</a>
+</div>
+<div class="flex items-center gap-6 text-primary/80">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">shopping_bag</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">person</span>
+</div>
+</nav>
+<main class="pt-48 pb-20 px-8 max-w-6xl mx-auto min-h-screen relative z-10">
+<header class="mb-24 text-center">
+<h1 class="font-headline text-5xl md:text-8xl italic tracking-tight text-primary mb-6">Curated For You</h1>
+<p class="font-label uppercase tracking-[0.4em] text-[10px] text-primary/60 font-bold">Aura Editorial • Personalized Selections</p>
+</header>
+
+        {% if products|length == 0 %}
+        <section class="flex flex-col items-center justify-center py-48 bg-white/40 backdrop-blur-xl rounded-[4rem] border border-white shadow-2xl shadow-primary/5 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-fixed/20 rounded-full blur-3xl"></div>
+<div class="mb-12 w-32 h-32 bg-gradient-to-br from-primary-fixed to-secondary-fixed rounded-full flex items-center justify-center text-primary relative">
+<div class="absolute inset-0 bg-primary/10 animate-ping rounded-full"></div>
+<span class="material-symbols-outlined text-6xl relative z-10" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h2 class="font-headline text-4xl text-on-surface mb-6">No recommendations found</h2>
+<p class="text-on-surface-variant/80 font-body max-w-md text-center leading-relaxed text-lg px-8">
+                Our editors are meticulously curating your personalized aesthetic vault. Return shortly for a bespoke collection.
+            </p>
+</section>
+        {% else %}
+        <div class="editorial-grid">
+            {% for product in products %}
+            <div class="editorial-card group relative bg-white/80 backdrop-blur-md rounded-[2.5rem] overflow-hidden border border-white transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_40px_100px_rgba(138,72,83,0.15)]">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-variant/30">
+<img 
+  src="{{ product.image_url if product.image_url else url_for('static', filename='images/default.png') }}" 
+  alt="{{ product.product_name }}"
+  class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
+/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+</div>
+<div class="p-10">
+<span class="font-label uppercase tracking-[0.25em] text-[9px] text-primary/70 font-bold mb-4 block">{{ product.brand }}</span>
+<h3 class="font-headline text-3xl text-on-surface mb-5 leading-tight">{{ product.product_name }}</h3>
+<p class="text-on-surface-variant/70 text-[15px] font-body mb-10 line-clamp-3 leading-relaxed italic">
+                        {{ product.about_product[:200] }}...
+                    </p>
+<div class="flex items-center justify-between mb-10">
+<span class="font-headline text-4xl text-primary/90">₹{{ product.price_inr | round(2) }}</span>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<a class="block w-full py-5 px-6 bg-primary text-white text-center rounded-2xl font-label text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-500 hover:bg-on-primary-fixed-variant hover:shadow-xl hover:shadow-primary/20 active:scale-[0.98]" href="{{ product.url }}">
+                            Visit Product Page
+                        </a>
+<a class="block w-full py-5 px-6 border border-primary/20 text-primary text-center rounded-2xl font-label text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-500 hover:bg-primary/5 hover:border-primary/40 active:scale-[0.98]" href="{{ url_for('add_to_cart', product_name=product.product_name) }}">
+                            Add to Cart
+                        </a>
+</div>
+</div>
+</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </main>
+<footer class="w-full pt-32 pb-16 flex flex-col items-center gap-10 px-12 bg-white/40 backdrop-blur-md border-t border-primary/5 mt-20 relative z-10">
+<div class="text-2xl font-headline text-primary italic font-bold">Trendify</div>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-all font-semibold" href="#">The Manifesto</a>
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-all font-semibold" href="#">Privacy Policy</a>
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-all font-semibold" href="#">Terms &amp; Conditions</a>
+<a class="font-label uppercase tracking-[0.2em] text-[10px] text-on-surface/50 hover:text-primary transition-all font-semibold" href="#">Concierge</a>
+</div>
+<div class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface/30 mt-4">
+            © 2024 Aura Editorial. Crafted with elegance.
+        </div>
+</footer>
+    {% endblock %}
+
+
+</body></html>

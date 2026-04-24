@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;600&amp;family=Work+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed": "#ffd9dd",
+                        "on-secondary-container": "#79342e",
+                        "background": "#faf9f6",
+                        "tertiary-container": "#7f735f",
+                        "surface-container": "#efeeeb",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#d7c1c3",
+                        "on-surface-variant": "#524345",
+                        "secondary-fixed": "#ffdad6",
+                        "tertiary-fixed-dim": "#d3c5ad",
+                        "on-primary-container": "#fffbff",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#8c4b55",
+                        "on-surface": "#1a1c1a",
+                        "on-background": "#1a1c1a",
+                        "inverse-on-surface": "#f2f1ee",
+                        "surface-variant": "#e3e2e0",
+                        "secondary": "#934841",
+                        "primary-container": "#a6606b",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#3a0915",
+                        "surface": "#faf9f6",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#ff9f95",
+                        "outline": "#857374",
+                        "inverse-surface": "#2f312f",
+                        "surface-container-high": "#e9e8e5",
+                        "surface-dim": "#dbdad7",
+                        "on-secondary-fixed-variant": "#76312b",
+                        "on-primary-fixed-variant": "#70343e",
+                        "on-tertiary-fixed-variant": "#4f4533",
+                        "surface-bright": "#faf9f6",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary": "#8a4853",
+                        "on-tertiary-fixed": "#221b0b",
+                        "tertiary": "#655b47",
+                        "on-secondary-fixed": "#3c0605",
+                        "tertiary-fixed": "#f0e0c8",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb2bc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .rose-gold-gradient {
+            background: linear-gradient(45deg, #8a4853 0%, #a6606b 100%);
+        }
+        .organic-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen overflow-x-hidden">
+
+    {% extends "base.html" %}
+
+    {% block content %}
+    <main class="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center relative p-6 md:p-12 lg:p-24 overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-fixed-dim/30 rounded-full blur-[100px] z-0"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-fixed/20 rounded-full blur-[100px] z-0"></div>
+<!-- Left Side: Editorial Image Section (Matching SCREEN_5 Layout) -->
+<div class="hidden lg:flex lg:w-1/2 h-full flex-col justify-center items-end pr-20 z-10">
+<div class="relative w-full max-w-md">
+<div class="organic-shape w-full aspect-[4/5] overflow-hidden shadow-[0_20px_50px_rgba(26,28,26,0.1)]">
+<img class="w-full h-full object-cover" data-alt="Close-up of luxurious makeup products with soft editorial lighting and organic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPYpAXLAWHZW8YdZbrljO2VNKKriMh1wmBA2Czbj9tAOH-0DgK9u8yqiZtvF4v7eWwgOF41pxixCDI-H8u9dCap1f9LdqDcM7ROdfZ6pXKppQmil5UlWQx1EdrEWGWXEfUztAnotBNr7iQYdx8TCHqlkhnBv9rRhb2NnTp5c5bV-ejg4Ifg1oAYd5xBMELLPuqSEGznflRDwekDW9ZEbHD8ZPsj7H3jIAf69IYvQ23PqfY13fM2avIg_ZHOumioeVT7OFtDp4Q620"/>
+</div>
+<!-- Floating Decorative Tag -->
+<div class="absolute -bottom-6 -left-12 bg-surface-container-lowest p-8 rounded-xl shadow-lg max-w-[200px]">
+<span class="font-label text-[10px] uppercase tracking-[0.15em] text-secondary block mb-2">Curated Perfection</span>
+<p class="font-headline italic text-lg leading-tight text-on-surface">The science of beauty, refined for you.</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Signup Card Section -->
+<div class="w-full lg:w-1/2 flex items-center justify-center lg:justify-start z-20">
+<!-- Glassmorphism Card (Preserved from Source) -->
+<div class="glass-panel w-full max-w-md p-10 md:p-14 rounded-[2rem] shadow-[0_20px_50px_rgba(138,72,83,0.05)] border border-outline-variant/15 relative">
+<header class="mb-10">
+<!-- Brand Anchor -->
+<div class="mb-8">
+<h2 class="font-headline italic text-3xl tracking-tighter text-on-surface mb-2">Trendify</h2>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+<h1 class="font-headline text-4xl text-on-surface mb-3 tracking-tight">Create Account</h1>
+<p class="font-body text-on-surface-variant/80 text-sm">Join our editorial circle for exclusive insights.</p>
+</header>
+<form class="space-y-8" method="POST">
+<!-- Input Group: Username -->
+<div class="relative group">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-primary absolute -top-2.5 left-0">Username</label>
+<div class="flex items-center border-b border-outline-variant group-focus-within:border-primary transition-all duration-300 py-2">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary mr-3 text-lg">person</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 text-on-surface placeholder:text-outline-variant font-body" name="username" placeholder="Username" required="" type="text"/>
+</div>
+</div>
+<!-- Input Group: Password -->
+<div class="relative group">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-primary absolute -top-2.5 left-0">Password</label>
+<div class="flex items-center border-b border-outline-variant group-focus-within:border-primary transition-all duration-300 py-2">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary mr-3 text-lg">lock</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 text-on-surface placeholder:text-outline-variant font-body" name="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+<!-- Sign Up Button -->
+<div class="pt-4">
+<button class="rose-gold-gradient w-full py-5 rounded-full text-white font-label uppercase tracking-[0.2em] text-xs font-semibold shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98]">
+                            Sign Up
+                        </button>
+</div>
+</form>
+<footer class="mt-10 text-center">
+<p class="font-body text-sm text-on-surface-variant">
+                        Already have an account? 
+                        <a class="text-primary font-semibold ml-1 hover:underline underline-offset-4 decoration-primary/30 transition-all" href="/login">Login</a>
+</p>
+</footer>
+</div>
+</div>
+<!-- Subtle Global Footer -->
+<footer class="w-full py-8 px-12 z-30 fixed bottom-0 hidden md:block">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 w-full max-w-screen-2xl mx-auto">
+<div class="font-headline italic text-lg text-on-surface">Trendify</div>
+<div class="font-label text-[10px] uppercase tracking-[0.15em] text-outline-variant">© 2024 Trendify Boutique. A Study in Grace.</div>
+<div class="flex gap-6">
+<a class="font-label text-[10px] uppercase tracking-[0.15em] text-outline-variant hover:text-primary transition-opacity" href="#">© 2024 Trendify Boutique. A Study in Grace.</a>
+<a class="font-label text-[10px] uppercase tracking-[0.15em] text-outline-variant hover:text-primary transition-opacity" href="#">© 2024 Trendify Boutique. A Study in Grace.</a>
+</div>
+</div>
+</footer>
+</main>
+    {% endblock %}
+
+
+</body></html>

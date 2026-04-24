@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trendify | The Digital Atelier</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#211a13",
+                    "tertiary-container": "#ffdfe1",
+                    "outline": "#7f7477",
+                    "on-tertiary-container": "#885b60",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#d2c4b9",
+                    "outline-variant": "#d0c3c6",
+                    "inverse-surface": "#31302e",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#6b5a5f",
+                    "on-primary-fixed-variant": "#524348",
+                    "on-tertiary-fixed-variant": "#633c41",
+                    "inverse-primary": "#d7c1c7",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#f1ede9",
+                    "secondary-container": "#efe0d4",
+                    "surface-container-high": "#ebe7e4",
+                    "on-secondary-container": "#6d6259",
+                    "on-surface": "#1c1c19",
+                    "surface-variant": "#e5e2de",
+                    "on-primary-fixed": "#24181c",
+                    "surface-container-highest": "#e5e2de",
+                    "on-background": "#1c1c19",
+                    "on-secondary-fixed-variant": "#4e453c",
+                    "surface-dim": "#ddd9d6",
+                    "surface": "#fdf9f5",
+                    "error": "#ba1a1a",
+                    "secondary": "#675d53",
+                    "on-surface-variant": "#4d4447",
+                    "primary-fixed-dim": "#d7c1c7",
+                    "primary": "#6b5a5f",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#311116",
+                    "background": "#fdf9f5",
+                    "secondary-fixed": "#efe0d4",
+                    "surface-container-low": "#f7f3ef",
+                    "on-primary-container": "#746368",
+                    "tertiary": "#7e5358",
+                    "tertiary-fixed-dim": "#f0b8be",
+                    "surface-bright": "#fdf9f5",
+                    "tertiary-fixed": "#ffd9dc",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#f4dde3",
+                    "primary-container": "#f8e1e7",
+                    "inverse-on-surface": "#f4f0ec"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh-gradient {
+            background-color: #fdf9f5;
+            background-image: 
+                radial-gradient(at 0% 0%, #f8e1e7 0px, transparent 50%),
+                radial-gradient(at 100% 0%, #efe0d4 0px, transparent 50%),
+                radial-gradient(at 100% 100%, #f0b8be 0px, transparent 50%),
+                radial-gradient(at 0% 100%, #f8e1e7 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh-gradient min-h-screen text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Background Blobs -->
+<div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary-fixed-dim blur-[120px] opacity-20"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[600px] h-[600px] rounded-full bg-tertiary-fixed-dim blur-[100px] opacity-30"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-100/60 dark:bg-stone-900/60 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(28,28,25,0.04)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<!-- Brand Logo -->
+<a class="text-2xl font-serif tracking-tighter text-stone-800 dark:text-stone-100 italic" href="/">Trendify</a>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-10">
+<a class="Plus Jakarta Sans tracking-wider text-xs uppercase text-stone-500 dark:text-stone-400 hover:text-rose-700 transition-colors" href="/recommend">Recommend</a>
+<a class="Plus Jakarta Sans tracking-wider text-xs uppercase text-stone-500 dark:text-stone-400 hover:text-rose-700 transition-colors" href="/eda">EDA</a>
+</div>
+<!-- Actions Cluster -->
+<div class="flex items-center gap-4">
+                {% if session.get('user') %}
+                    <a class="p-2 text-stone-500 hover:scale-105 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300 flex items-center justify-center" href="/cart">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</a>
+<a class="p-2 text-stone-500 hover:scale-105 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300 flex items-center justify-center" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+<a class="p-2 text-stone-500 hover:scale-105 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300 flex items-center justify-center" href="/logout">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+</a>
+                {% else %}
+                    <a class="Plus Jakarta Sans tracking-wider text-xs uppercase text-stone-500 dark:text-stone-400 hover:text-rose-700 transition-colors px-4 py-2" href="/login">Login</a>
+<a class="bg-gradient-to-br from-primary-container to-secondary-container text-on-primary-fixed px-6 py-2.5 rounded-full Plus Jakarta Sans tracking-wider text-xs uppercase font-semibold hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm" href="/signup">Sign Up</a>
+                {% endif %}
+            </div>
+</div>
+</nav>
+<!-- Content Canvas -->
+<main class="pt-28 pb-20 px-6 max-w-7xl mx-auto min-h-[calc(100vh-100px)]">
+        {% block content %}{% endblock %}
+    </main>
+<!-- Footer -->
+<footer class="w-full bg-stone-50 dark:bg-stone-950 border-t border-stone-200/20">
+<div class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-2">
+<span class="font-serif text-lg italic text-stone-900 dark:text-stone-100">Trendify Atelier</span>
+<p class="text-stone-500 dark:text-stone-400 text-xs">© 2024 Trendify Atelier. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors text-[0.75rem] font-medium opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors text-[0.75rem] font-medium opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors text-[0.75rem] font-medium opacity-80 hover:opacity-100" href="#">Editorial Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-300 transition-colors text-[0.75rem] font-medium opacity-80 hover:opacity-100" href="#">Sustainability</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell (Appears on small screens only) -->
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white/70 backdrop-blur-2xl rounded-full px-6 py-4 flex justify-around items-center z-50 shadow-2xl border border-white/20">
+<a class="flex flex-col items-center gap-1 text-stone-500 hover:text-rose-900 transition-colors" href="/">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] uppercase tracking-widest font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 hover:text-rose-900 transition-colors" href="/recommend">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[10px] uppercase tracking-widest font-semibold">Match</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 hover:text-rose-900 transition-colors" href="/cart">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[10px] uppercase tracking-widest font-semibold">Cart</span>
+</a>
+        {% if session.get('user') %}
+        <a class="flex flex-col items-center gap-1 text-stone-500 hover:text-rose-900 transition-colors" href="/logout">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-[10px] uppercase tracking-widest font-semibold">Exit</span>
+</a>
+        {% else %}
+        <a class="flex flex-col items-center gap-1 text-stone-500 hover:text-rose-900 transition-colors" href="/login">
+<span class="material-symbols-outlined" data-icon="login">login</span>
+<span class="text-[10px] uppercase tracking-widest font-semibold">Login</span>
+</a>
+        {% endif %}
+    </div>
+</body></html>

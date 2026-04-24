@@ -1,0 +1,17 @@
+#cart.html {% extends "base.html" %}
+{% block content %}
+
+<h2>Your Cart</h2>
+
+{% for item in cart %}
+<div class="card p-3 mb-3">
+    <img src="{{ item.image_url }}" width="120">
+    <h4>{{ item.product_name }}</h4>
+    <p>₹{{ item.price_inr | round(2) }}</p>
+    <a href="{{ item.url }}" target="_blank" class="btn btn-success">
+        Buy Now
+    </a>
+</div>
+{% endfor %}
+
+{% endblock %}

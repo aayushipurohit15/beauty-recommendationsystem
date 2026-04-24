@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Trendify</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#fffbff",
+                        "surface-container": "#efeeeb",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#f0e0c8",
+                        "on-tertiary-fixed": "#221b0b",
+                        "surface-container-high": "#e9e8e5",
+                        "on-secondary-fixed": "#3c0605",
+                        "surface-variant": "#e3e2e0",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "primary-fixed": "#ffd9dd",
+                        "tertiary-container": "#7f735f",
+                        "on-secondary-container": "#79342e",
+                        "surface-tint": "#8c4b55",
+                        "outline": "#857374",
+                        "on-background": "#1a1c1a",
+                        "on-primary-fixed-variant": "#70343e",
+                        "on-error": "#ffffff",
+                        "primary": "#8a4853",
+                        "primary-container": "#a6606b",
+                        "on-secondary-fixed-variant": "#76312b",
+                        "secondary-container": "#ff9f95",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#faf9f6",
+                        "on-surface-variant": "#524345",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e3e2e0",
+                        "outline-variant": "#d7c1c3",
+                        "on-tertiary-container": "#fffbff",
+                        "inverse-surface": "#2f312f",
+                        "background": "#faf9f6",
+                        "surface": "#faf9f6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f4f3f1",
+                        "inverse-on-surface": "#f2f1ee",
+                        "secondary-fixed": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#ffb2bc",
+                        "secondary": "#934841",
+                        "tertiary-fixed-dim": "#d3c5ad",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4f4533",
+                        "on-surface": "#1a1c1a",
+                        "on-primary-fixed": "#3a0915",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#655b47",
+                        "surface-dim": "#dbdad7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- Main Editorial Container -->
+<main class="min-h-screen w-full flex flex-col md:flex-row items-center justify-center relative p-6 md:p-12 lg:p-24 overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-fixed-dim/30 rounded-full blur-[100px] z-0"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-fixed/20 rounded-full blur-[100px] z-0"></div>
+<!-- Left Column: Editorial Imagery (Pinterest/Magazine Style) -->
+<div class="hidden lg:flex w-1/2 h-full flex-col justify-center items-end pr-20 z-10">
+<div class="relative w-full max-w-md">
+<div class="organic-shape w-full aspect-[4/5] overflow-hidden shadow-[0_20px_50px_rgba(26,28,26,0.1)]">
+<img class="w-full h-full object-cover" data-alt="close-up of luxurious pink skincare serum drops with soft lighting on a pale ivory background with organic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALoPeDETAlqNf-B8-Ir-fo4FfVtnC2cAy0HiWlln501j92BFSZ8z1j9oBq2BPD5o0q88KFG6dMjKFO3sdUsZeYot8T0qjCrbMUtNMulId5AJ-ZTwmxO593nJ3b245IJkwlkNouj7mSyl7fUWlVAXUm5ksHEnZV-74K5cEONQhgQMaBRxliE5Ukle22X_Wf4rk63d-apOxg_XJE8WBY9XBwvuHsVJQfUYRPNLPuDa0y0z8JF43DyuFugbeFI9wYn-fTqAorshrltBc"/>
+</div>
+<!-- Floating Decorative Tag -->
+<div class="absolute -bottom-6 -left-12 bg-surface-container-lowest p-8 rounded-xl shadow-lg max-w-[200px]">
+<span class="font-label text-[10px] uppercase tracking-[0.15em] text-secondary block mb-2">Curated Beauty</span>
+<p class="font-headline italic text-lg leading-tight text-on-surface">Experience the texture of grace.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Login Card -->
+<div class="w-full lg:w-1/2 flex items-center justify-center lg:justify-start z-20">
+<div class="glass-card w-full max-w-md p-10 md:p-14 rounded-[2rem] shadow-[0_10px_40px_rgba(26,28,26,0.05)] border border-outline-variant/15">
+<!-- Brand Anchor -->
+<div class="mb-12">
+<h2 class="font-headline italic text-3xl tracking-tighter text-on-surface mb-2">Trendify</h2>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+<div class="mb-10">
+<h1 class="font-headline text-4xl font-bold tracking-tight text-on-surface leading-tight mb-4">Login to Trendify</h1>
+<p class="font-body text-on-surface-variant/80 text-sm leading-relaxed">Enter your credentials to access your curated editorial collection and archives.</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-8" method="POST">
+<!-- Username Input -->
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-[0.15em] text-on-surface-variant/60 block mb-2 px-1">Username</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-1 text-on-surface focus:ring-0 focus:border-primary transition-all duration-300 placeholder:text-outline/30 font-body" name="username" placeholder="editor_grace" type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-500 group-focus-within:w-full"></div>
+</div>
+</div>
+<!-- Password Input -->
+<div class="relative group">
+<div class="flex justify-between items-center mb-2 px-1">
+<label class="font-label text-[10px] uppercase tracking-[0.15em] text-on-surface-variant/60 block">Password</label>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-1 text-on-surface focus:ring-0 focus:border-primary transition-all duration-300 placeholder:text-outline/30 font-body" name="password" placeholder="••••••••" type="password"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-500 group-focus-within:w-full"></div>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-6">
+<button class="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label text-xs uppercase tracking-[0.2em] font-semibold shadow-[0_10px_30px_rgba(138,72,83,0.3)] hover:shadow-[0_15px_40px_rgba(138,72,83,0.4)] transition-all duration-500 transform hover:-translate-y-1" type="submit">
+                            Login
+                        </button>
+</div>
+</form>
+<!-- Footer Links -->
+<div class="mt-12 text-center">
+<p class="font-body text-sm text-on-surface-variant/70">
+                        Don't have an account? 
+                        <a class="ml-1 font-label text-[10px] uppercase tracking-[0.15em] text-primary hover:text-secondary transition-colors duration-300 underline underline-offset-4 decoration-primary/20" href="/signup">Create one</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Global Footer Fragment (As per Shared Components) -->
+<footer class="w-full py-8 px-12 bg-surface-container-low border-t border-outline-variant/15 z-30 fixed bottom-0 hidden md:block">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 w-full max-w-screen-2xl mx-auto">
+<div class="font-noto-serif text-lg text-on-surface">Trendify</div>
+<div class="font-work-sans text-[10px] uppercase tracking-[0.15em] text-on-surface-variant/40">
+                © 2024 Ethereal Editor. A Study in Grace.
+            </div>
+<div class="flex gap-6">
+<a class="font-work-sans text-[10px] uppercase tracking-[0.15em] text-on-surface-variant/40 hover:text-primary transition-opacity" href="#">© 2024 Trendify. A Study in Grace.</a>
+<a class="font-work-sans text-[10px] uppercase tracking-[0.15em] text-on-surface-variant/40 hover:text-primary transition-opacity" href="#">Sustainability</a>
+</div>
+</div>
+</footer>
+</body></html>

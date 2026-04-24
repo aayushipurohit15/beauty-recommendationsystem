@@ -1,0 +1,252 @@
+<html><head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body>{% extends "base.html" %}
+
+{% block content %}
+
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600&amp;family=Work+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#f0e0c8",
+                        "primary": "#8a4853", /* Deep Rose */
+                        "outline-variant": "#d7c1c3",
+                        "on-secondary-container": "#4a1e1b",
+                        "on-primary-fixed": "#3a0915",
+                        "inverse-primary": "#ffb2bc",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#655b47",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "on-background": "#1a1c1a",
+                        "surface": "#faf9f6", /* Creamy Ivory */
+                        "on-surface-variant": "#524345",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e5",
+                        "on-tertiary-fixed-variant": "#4f4533",
+                        "on-secondary-fixed-variant": "#76312b",
+                        "secondary": "#a65d52", /* Terracotta */
+                        "surface-container-low": "#f4f3f1",
+                        "surface-container": "#efeeeb",
+                        "surface-tint": "#8c4b55",
+                        "on-tertiary-fixed": "#221b0b",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f312f",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary": "#ffffff",
+                        "outline": "#857374",
+                        "on-primary-fixed-variant": "#70343e",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "background": "#faf9f6",
+                        "primary-container": "#a6606b",
+                        "inverse-on-surface": "#f2f1ee",
+                        "tertiary-fixed-dim": "#d3c5ad",
+                        "on-secondary-fixed": "#3c0605",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-variant": "#e3e2e0",
+                        "surface-dim": "#dbdad7",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#ff9f95",
+                        "on-surface": "#1a1c1a",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#7f735f",
+                        "primary-fixed": "#ffd9dd",
+                        "on-primary-container": "#fffbff",
+                        "surface-bright": "#faf9f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .organic-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-bottom-color: #8a4853 !important;
+            border-bottom-width: 2px !important;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<div class="min-h-screen bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed relative overflow-hidden">
+<!-- Ambient Background Blobs -->
+<div class="absolute top-[-10%] left-[-5%] w-[40rem] h-[40rem] bg-primary-fixed-dim/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-5%] w-[35rem] h-[35rem] bg-tertiary-fixed/30 rounded-full blur-[100px]"></div>
+<!-- Top Navigation Cluster -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/70 backdrop-blur-xl flex justify-between items-center px-12 py-6 max-w-none shadow-[0_10px_30px_rgba(26,28,26,0.05)]">
+<div class="text-2xl font-headline font-bold text-primary tracking-tighter">Trendify</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60 hover:text-primary transition-colors duration-300" href="#">Curations</a>
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60 hover:text-primary transition-colors duration-300" href="#">Journal</a>
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60 hover:text-primary transition-colors duration-300" href="#">Boutique</a>
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-primary border-b border-primary pb-1" href="#">Aura</a>
+</div>
+<div class="flex items-center gap-6 text-primary">
+<span class="material-symbols-outlined cursor-pointer">shopping_bag</span>
+<span class="material-symbols-outlined cursor-pointer">person</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-48 pb-16 px-6 text-center max-w-4xl mx-auto relative z-10">
+<h1 class="font-headline text-5xl md:text-7xl italic tracking-tight text-primary mb-6">Personalize Your Skin Profile</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            Embark on a bespoke journey to discover your unique radiance. Our ethereal editor curates beauty rituals tailored to your skin's poetic narrative.
+        </p>
+</header>
+<!-- Personalization Form -->
+<main class="max-w-6xl mx-auto px-6 pb-32 relative z-10">
+<form action="" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start" method="POST">
+<!-- Section 1: Skin Profile (Asymmetric Layout) -->
+<div class="md:col-span-7 glass-card p-10 rounded-xl shadow-[0_10px_30px_rgba(26,28,26,0.05)]">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label uppercase tracking-[0.2em] text-[11px] text-primary bg-primary-fixed px-3 py-1 rounded-full">01</span>
+<h2 class="font-headline text-2xl italic text-secondary">Skin Profile</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Skin Type</label>
+<select class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all cursor-pointer" name="skin_type">
+<option value="Oily">Oily</option>
+<option value="Dry">Dry</option>
+<option value="Combination">Combination</option>
+<option value="Normal">Normal</option>
+</select>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Primary Concern</label>
+<select class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all cursor-pointer" name="concern">
+<option value="Acne">Acne</option>
+<option value="Dryness">Dryness</option>
+<option value="Pigmentation">Pigmentation</option>
+<option value="Sensitivity">Sensitivity</option>
+</select>
+</div>
+</div>
+<div class="mt-12 overflow-hidden rounded-xl h-64 relative group">
+<img class="w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-700" data-alt="close-up of clean healthy skin with soft sunlight hitting the face and subtle dewiness on the cheekbones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBHZ862qQR_l8OXyLTF7lIB2cFaZkFW74MKSCgRYTY49aUQUxzA1OIVvokhITaTWgJsOQ7TR30jEEmnls-s7ySDbKlbdH50xhDOQJMu6_rWn0JT_YcsUw8wpo_GWaP9ZFbWWISTwypFyuHBWA7S_vxR-ZlUNVULVPiXtvlAC2u_3szErPW8k4eO9jgO8i8GSBRXakGCu9itHioeXEufQOkHs1IqBiEjVbQwYt4yqnzxrDoG9trh1Ky05RfglifGHp-R3H3mERSITw"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+<!-- Section 2: Beauty Preferences (Floating Card) -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-low p-10 rounded-xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label uppercase tracking-[0.2em] text-[11px] text-primary bg-primary-fixed px-3 py-1 rounded-full">02</span>
+<h2 class="font-headline text-2xl italic text-secondary">Beauty Preferences</h2>
+</div>
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Category</label>
+<select class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all cursor-pointer" name="category">
+<option value="Lip">Lip</option>
+<option value="Eye">Eye</option>
+<option value="Face">Face</option>
+<option value="Skincare">Skincare</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Preferred Brand</label>
+<input class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface placeholder:text-on-surface-variant/30 focus:ring-0 transition-all" name="brand" placeholder="e.g. Chanel, Aesop" type="text"/>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Key Ingredient</label>
+<input class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface placeholder:text-on-surface-variant/30 focus:ring-0 transition-all" name="ingredient" placeholder="e.g. Retinol, Vitamin C" type="text"/>
+</div>
+</div>
+</div>
+<!-- Abstract Decorative Piece -->
+<div class="organic-shape bg-gradient-to-br from-primary/10 to-secondary/10 h-32 flex items-center justify-center p-6 text-center italic text-primary/60 font-headline text-sm">
+                    "True beauty begins the moment you decide to be yourself."
+                </div>
+</div>
+<!-- Section 3: Budget & Filters (Wide Layout) -->
+<div class="md:col-span-12 glass-card p-10 rounded-xl shadow-[0_10px_30px_rgba(26,28,26,0.05)] grid grid-cols-1 md:grid-cols-4 gap-10">
+<div class="md:col-span-4 flex items-center gap-4 mb-4">
+<span class="font-label uppercase tracking-[0.2em] text-[11px] text-primary bg-primary-fixed px-3 py-1 rounded-full">03</span>
+<h2 class="font-headline text-2xl italic text-secondary">Budget &amp; Filters</h2>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Budget Level</label>
+<select class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all cursor-pointer" name="budget">
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Min Price ($)</label>
+<input class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all" name="min_price" type="number"/>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Max Price ($)</label>
+<input class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all" name="max_price" type="number"/>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/60">Minimum Rating</label>
+<select class="bg-transparent border-0 border-b border-outline-variant py-3 px-0 font-body text-on-surface focus:ring-0 transition-all cursor-pointer" name="rating">
+<option value="Any">Any</option>
+<option value="3+">3+</option>
+<option value="4+">4+</option>
+<option value="4.5+">4.5+</option>
+</select>
+</div>
+</div>
+<!-- Action Button -->
+<div class="md:col-span-12 flex flex-col items-center pt-8 gap-16">
+<button class="group relative px-12 py-5 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-label uppercase tracking-[0.2em] text-xs shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300" type="submit">
+<span class="relative z-10">Get Recommendations</span>
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 rounded-full transition-opacity"></div>
+</button>
+<!-- Additional Editorial Image -->
+<div class="w-full max-w-5xl h-[500px] rounded-3xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover" data-alt="A high-end editorial flat lay of a luxury eyeshadow palette and a matching pink lipgloss, set against a soft pink backdrop with elegant lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkm30x7Fm2KlCIIL605OEmM5rF_128AgqmbEyQES6ChP3SKxmPgy3aWz-vdCSbGxnf1vZLH-ZBhlZFUfmHwzz5G74eHPEoIpdVeucHUg-LU8u1ey0KLVLFBOS3IXiY7xbsAgBm6DhDhqzDPb8_BbuNR9tQl9ILebXNXzJJHMn9rfwqicHdAZ6h1a6q79Ks0NXYAbrdPiyh9Eqkqi4JxURPetX_ivEPRUDUear_TmjTh4mZA_MYzAkrcE6GhEUFGAZutXfUlwPuzYM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white max-w-xs">
+<p class="font-headline italic text-2xl opacity-90">Curated with intent.</p>
+</div>
+</div>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 flex flex-col items-center gap-8 px-12 bg-[#f4f3f1] border-t border-[#d7c1c3]/15">
+<div class="text-lg font-headline text-on-surface">Trendify Excellence</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/40 hover:text-primary transition-all underline-offset-4 hover:underline" href="#">The Manifesto</a>
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/40 hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Bespoke Service</a>
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/40 hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Sustainability</a>
+<a class="font-label uppercase tracking-[0.15em] text-[10px] text-on-surface/40 hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Concierge</a>
+</div>
+<div class="text-[10px] font-label uppercase tracking-[0.1em] text-on-surface/30">
+            © 2024 Trendify Excellence. All Rights Reserved.
+        </div>
+</footer>
+</div>
+{% endblock %}</body></html>

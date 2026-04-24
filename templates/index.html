@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#6b5a5f",
+                        "outline": "#7f7477",
+                        "on-background": "#1c1c19",
+                        "tertiary-container": "#ffdfe1",
+                        "on-secondary-container": "#6d6259",
+                        "primary-fixed": "#f4dde3",
+                        "secondary-fixed-dim": "#d2c4b9",
+                        "primary-fixed-dim": "#d7c1c7",
+                        "surface-variant": "#e5e2de",
+                        "surface-container-high": "#ebe7e4",
+                        "on-secondary-fixed": "#211a13",
+                        "on-tertiary-fixed": "#311116",
+                        "tertiary-fixed": "#ffd9dc",
+                        "surface-container": "#f1ede9",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#746368",
+                        "surface-bright": "#fdf9f5",
+                        "on-surface-variant": "#4d4447",
+                        "secondary-container": "#efe0d4",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#f8e1e7",
+                        "on-secondary-fixed-variant": "#4e453c",
+                        "primary": "#885b60", /* Deep Rose accent */
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#524348",
+                        "secondary-fixed": "#efe0d4",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f4f0ec",
+                        "surface-container-low": "#f7f3ef",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fdf9f5", /* Ivory base */
+                        "surface-container-highest": "#e5e2de",
+                        "outline-variant": "#d0c3c6",
+                        "on-tertiary-container": "#885b60",
+                        "inverse-surface": "#31302e",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#ddd9d6",
+                        "tertiary": "#7e5358",
+                        "on-primary-fixed": "#24181c",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1c1c19",
+                        "on-tertiary-fixed-variant": "#633c41",
+                        "tertiary-fixed-dim": "#f0b8be",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#675d53",
+                        "inverse-primary": "#d7c1c7",
+                        "surface": "#fdf9f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .blob {
+            filter: blur(100px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Background Blobs -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+<div class="blob absolute -top-24 -left-24 w-[500px] h-[500px] bg-primary-fixed-dim rounded-full"></div>
+<div class="blob absolute top-1/2 -right-48 w-[600px] h-[600px] bg-tertiary-fixed-dim rounded-full"></div>
+</div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl border-b border-outline-variant/10">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif tracking-tighter text-stone-800 dark:text-stone-100">Trendify</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary/20 pb-1 font-label tracking-wider text-xs uppercase" href="#">Recommend</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors font-label tracking-wider text-xs uppercase" href="#">EDA</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 hover:scale-105 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+</button>
+<button class="p-2 hover:scale-105 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/20 mx-2"></div>
+<a class="px-6 py-2 rounded-full bg-primary-container text-on-primary-fixed font-semibold text-sm hover:scale-105 transition-transform active:scale-95" href="/login">Login</a>
+<button class="hidden md:block px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface font-semibold text-sm hover:bg-surface-container-highest transition-all">Sign Up</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 lg:pt-32">
+<!-- Hero Section: Split Layout -->
+<section class="max-w-screen-2xl mx-auto px-8 py-12 lg:py-24 flex flex-col lg:flex-row gap-20 lg:items-center">
+<!-- Left Side: Content -->
+<div class="flex-1 space-y-12 order-2 lg:order-1">
+<div class="space-y-6">
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 rounded-full bg-primary-container/40 text-on-primary-fixed font-label text-[10px] uppercase tracking-widest border border-primary/10">Personalized</span>
+<span class="px-4 py-1.5 rounded-full bg-primary-container/40 text-on-primary-fixed font-label text-[10px] uppercase tracking-widest border border-primary/10">Beauty-First</span>
+<span class="px-4 py-1.5 rounded-full bg-primary-container/40 text-on-primary-fixed font-label text-[10px] uppercase tracking-widest border border-primary/10">Elegant Discovery</span>
+</div>
+<h1 class="text-7xl md:text-9xl font-serif text-on-background tracking-tighter leading-[0.85]">Trendify</h1>
+<h2 class="text-2xl md:text-4xl font-serif italic text-primary leading-tight opacity-90">A Content-Based Beauty Recommendation System</h2>
+</div>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed font-light">
+                    Unveil a curated world of skincare and artistry. Our intelligent atelier analyzes ingredient profiles and aesthetic preferences to architect your perfect beauty regimen.
+                </p>
+<div class="flex flex-wrap items-center gap-8 pt-4">
+<a class="px-12 py-5 rounded-full bg-primary text-on-primary font-bold text-lg shadow-2xl shadow-primary/20 hover:scale-[1.03] transition-all duration-300 active:scale-95 group flex items-center gap-3" href="/login">
+                        Start Personalizing
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="text-label text-sm font-semibold tracking-widest uppercase flex items-center gap-4 group text-primary" href="#">
+                        How it works
+                        <span class="w-12 h-px bg-primary/40 group-hover:w-20 transition-all duration-500"></span>
+</a>
+</div>
+</div>
+<!-- Right Side: Product Collage (Skincare + Makeup) -->
+<div class="flex-1 relative order-1 lg:order-2">
+<div class="grid grid-cols-12 grid-rows-12 gap-6 h-[500px] md:h-[700px]">
+<!-- Main Image: High-end Skincare -->
+<div class="col-span-7 row-span-12 rounded-3xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000" data-alt="High-end serum bottle in golden hour light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSk8Q110YMm6eHGlLX8cC2wEoqhlpAqNx6r98zWAMWlQDnmK_Rh8Zo_VCisk6nq5ixMa5rzbM7ep9M6_aZHe8IkAKjMHT11vuxWPTTdYQg8xuV1SsXpMTNnCBupOXftLnaYhBabScPadlVp4VItaS-Y6s78mvqmvglQ7GpcnjLOn46xhk1tkY4nELhaf_BLu8v7E5kgKYpWXuWqljWq-YyJHRKYADezDkNxnY4ZHeLPD4JuyB7cg8XkwWh44qAdhlkKTFWUVujroQ"/>
+</div>
+<!-- Makeup Image 1: Swatches -->
+<div class="col-span-5 row-span-5 rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000" data-alt="Soft pink makeup swatches on skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4tCUses36pf8BKlqJRfgscANVEyHeXsAPN430ND4QQqO6vZ2FIRWPg9w1bYQ7SUg9yWqWg5-hvoROE-VHgh_VI3EQYbB0VKTVi7NPvu3gLvMB9PCyGmpLgQwusGQD_-0S4q6DGs--IgBISlkKpZdq1XoveoaFPJ1sv9FQGZiRXP975Vvh5RKJOMiay4ymdo1InBY-4eIEJzW78YqhU9ppNBnNt0gLpAuy8k-0gKy4kawrEO5Gsi9kYUMubYno6FImjjJc479_I74"/>
+</div>
+<!-- Makeup Image 2: Palette/Vanity -->
+<div class="col-span-5 row-span-7 relative">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent z-10 pointer-events-none rounded-3xl"></div>
+<div class="absolute bottom-6 left-6 glass-panel rounded-2xl p-4 z-20 border border-white/20">
+<span class="text-primary font-serif italic text-sm block">Curated Glow</span>
+<div class="flex gap-1 mt-1">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<img class="w-full h-full object-cover rounded-3xl transform hover:scale-105 transition-transform duration-1000" data-alt="Elegant vanity with skincare and rose petals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi7Ix_J11Dm2Z_60RIzjX5550JM2Zf6pQtsZIIrYDZUk7zXdg8C5lwkpkKADoS12wvdzTt8b9dNQeMVMPSaVROpX_t_0y7NhMvB8-IKHN4l2HpRX9swzdn86aISR0DHSp7uMDmGVkiofT54j_j5FomxygSP-IJzYkx19SU2RkPOaRUhmBE4euBhnygU2q0P93NdArW7RINT2b9m7xIcJcLRoxmOCIV-WLhx-I3OF_E3CE1cf-gVh6FBOLAE51I-lT6M8BTJ2_w_OI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Features Section -->
+<section class="bg-primary-container/20 py-24">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="mb-20 max-w-2xl">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-6">The Tech Behind The Glow</p>
+<h3 class="text-5xl md:text-6xl font-serif text-on-background leading-tight">Crafted by algorithms, curated for your skin.</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature Card 1 -->
+<div class="md:col-span-2 bg-white p-12 rounded-[2.5rem] flex flex-col justify-between min-h-[400px] border border-primary/5 shadow-sm">
+<div class="space-y-8">
+<span class="material-symbols-outlined text-5xl text-primary/80">analytics</span>
+<h4 class="text-3xl font-serif text-on-background">Content-Based Intelligence</h4>
+<p class="text-on-surface-variant max-w-md text-lg font-light leading-relaxed">Our engine maps thousands of ingredient interactions and color theories to provide recommendations that aren't just trendy—they're scientifically relevant.</p>
+</div>
+<div class="pt-8 flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-4 border-white bg-primary-fixed"></div>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-secondary-fixed"></div>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-tertiary-fixed"></div>
+<div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-surface-container text-[11px] font-bold">+2k</div>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="bg-primary-container/40 p-12 rounded-[2.5rem] border border-primary/10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-5xl text-primary/80">magic_button</span>
+<h4 class="text-3xl font-serif text-on-background mt-8 mb-6 leading-tight">Visual Synthesis</h4>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed">Upload a mood board or selfie. Trendify decodes the aesthetic essence to find matching palettes instantly.</p>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="bg-white p-12 rounded-[2.5rem] border border-primary/5 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-5xl text-primary/80">verified_user</span>
+<h4 class="text-3xl font-serif text-on-background mt-8 mb-6 leading-tight">Ethical Filters</h4>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed">Filter for vegan, cruelty-free, or sustainable luxury without compromising on elegance.</p>
+</div>
+</div>
+<!-- Feature Card 4 -->
+<div class="md:col-span-2 relative rounded-[2.5rem] overflow-hidden group h-[450px]">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+<div class="absolute bottom-12 left-12 z-20 text-white">
+<h4 class="text-4xl font-serif mb-4">Real-time Trend Analysis</h4>
+<p class="max-w-md opacity-90 text-lg font-light leading-relaxed">Stay ahead of the curve with our live dashboard analyzing global beauty shifts from Paris to Seoul.</p>
+</div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Abstract makeup pigments swirl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtemrzpwAO7x8baKEus2p7eUElsWKRtg-hz7Jal0kS3gcSwV1adl3S36tm7Rv_2axnYwpQ1lDpfMsR6soAfGAuRJiMuyjzABET74yG-Mlrgjf1_Yv8nc7LutSVRH8vzss_-_e0yV4quYGHB94d7NkBwpM6zVUC-zzrZ8DLS6957IFo9RZimXYpyelffHXV8sbTMJD7mpnZMs6Yjhhhz4shCMa2dRBcOgaTKjoJJn6tIiOqxqAjqd6BZDA_7y2mocT89LQiVzpSHyk"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-stone-950 w-full border-t border-primary/5 py-16">
+<div class="w-full px-8 flex flex-col md:flex-row justify-between items-center gap-10 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-serif text-2xl tracking-tighter text-stone-900 dark:text-stone-100">Trendify</div>
+<p class="text-xs font-body text-stone-500 tracking-widest uppercase">© 2024 Trendify Atelier. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-xs font-body text-stone-500 hover:text-primary transition-colors tracking-widest uppercase" href="#">Privacy</a>
+<a class="text-xs font-body text-stone-500 hover:text-primary transition-colors tracking-widest uppercase" href="#">Terms</a>
+<a class="text-xs font-body text-stone-500 hover:text-primary transition-colors tracking-widest uppercase" href="#">Editorial</a>
+<a class="text-xs font-body text-stone-500 hover:text-primary transition-colors tracking-widest uppercase" href="#">Sustainability</a>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer">public</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer">chat</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-primary transition-colors cursor-pointer">photo_camera</span>
+</div>
+</div>
+</footer>
+</body></html>
